@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert</title>
+    <style>
+    .alert {
+        padding: 20px;
+        background-color: #f44336;
+        color: white;
+        margin-bottom: 15px;
+        opacity: 1;
+        transition: opacity 0.6s;
+    }
+    .closebtn {
+        margin-left: 15px;
+        color: white;
+        font-weight: bold;
+        float: right;
+        font-size: 22px;
+        line-height: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .closebtn:hover {
+        color: black;
+    }
+    </style>
+</head>
+<body>
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <p>This is an Alert</p>
+    </div>
+    <script>
+        var Close = document.getElementsByClassName("closebtn")
+        var i 
+        for (i= 0 ; i < Close.length ; i++) {
+            Close[i].onclick = function () {
+                var div = this.parentElement
+                div.style.opacity = "0"
+                setTimeout(function(){
+                    div.style.display = "none"
+                },600 )
+            }   
+         }
+    </script>
+    
+</body>
+</html>
