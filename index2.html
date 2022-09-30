@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallOut</title>
+    <style>
+        .callout {
+            position: fixed;
+            bottom: 35px;
+            right: 20px;
+            margin-left: 20px;
+            max-width: 300px;
+        }
+        .callout-header {
+            padding: 25px 15px;
+            background-color: #555;
+            font-size: 30px;
+            color: white;
+        }
+        .callout-container {
+            padding: 15px;
+            background-color: #ccc;
+            color: black;
+        }
+        .closebtn {
+            position: absolute;
+            top: 5px;
+            right: 15px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        .closebtn:hover {
+            color: lightgrey;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="callout">
+        <div class="callout-header">Callout Header</div>
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <div class="callout-container">
+            <p>Some text...</p>
+        </div>
+    </div>
+
+    <script>
+        
+    </script>
+    
+</body>
+</html>
